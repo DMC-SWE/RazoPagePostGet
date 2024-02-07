@@ -1,0 +1,26 @@
+﻿@page
+@model FirstrazorPage.Pages.Food.AddFoodModel
+@{
+    ViewData["Title"] = "AddFood";
+}
+
+<h1>Add food</h1>
+
+<h2>Post</h2>
+<form method="post" asp-page-handler="Redirect">
+    <input type="text" asp-for="Food.Name" placeholder="Food Name"/>
+    <input type="text" asp-for="Food.Description" placeholder="Food Description" />
+    <button type="submit">Submit</button>
+</form>
+
+<h2>Cross Post</h2>
+<form method="post">
+    <input type="text" asp-for="Food.Name" placeholder="Food Name"/>
+    <input type="text" asp-for="Food.Description" placeholder="Food Description" />
+    <button type="submit">Submit</button>
+</form>
+
+<h2>Get</h2>
+<form method="get" asp-page="./Index">
+    <button type="submit">Submit</button>
+</form>

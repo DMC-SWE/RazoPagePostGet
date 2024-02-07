@@ -1,0 +1,17 @@
+﻿@page
+@model FirstrazorPage.Pages.Food.IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Food List</h1>
+<p>@Model.Food.Name</p>
+<p>@Model.Food.Description</p>
+
+<li>
+    <a asp-page="AddFood" asp-route-Food.Name="Chicken">AddFood</a>
+</li>
+
+<li>
+    <a asp-page="AddFood" asp-route-Food.Name ="Ham">AddFood</a>
+</li>
